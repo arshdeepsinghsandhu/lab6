@@ -17,9 +17,19 @@ def find_center(rect):
     p.y = rect.corner.y + rect.height/2.0
     return p
 
+
+
+def move_rectangle(rect, dx, dy):
+    rect.corner.x = rect.corner.x + dx
+    rect.corner.y = rect.corner.y + dx
+    return rect.corner.x , rect.corner.y
+
+
 def print_point(p):
     print (p.x , p.y)
 
-center = find_center(box)
+#center = find_center(box)
 
-print_point(center)
+print(move_rectangle(box, 5.0, 5.0))
+
+#print_point(center)
